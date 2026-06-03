@@ -1,0 +1,11 @@
+.bar {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--mauve), var(--blue), var(--teal));
+  transform-origin: left;
+  border-radius: 0 1px 1px 0;
+  box-shadow: 0 0 8px rgba(137, 180, 250, 0.5);
+}

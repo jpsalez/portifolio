@@ -1,0 +1,53 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+/* Variant: inside the title bar (compact) */
+.header {
+  font-size: 0.68rem;
+  padding: 4px 10px;
+  color: var(--green);
+  background: rgba(166, 227, 161, 0.1);
+  border: 1px solid rgba(166, 227, 161, 0.25);
+  letter-spacing: 0.04em;
+}
+
+.header:hover {
+  background: rgba(166, 227, 161, 0.2);
+  border-color: rgba(166, 227, 161, 0.5);
+}
+
+/* Variant: inside the contact section (large) */
+.contact {
+  font-size: 0.85rem;
+  padding: 12px 22px;
+  color: var(--crust);
+  background: var(--green);
+  border: 1px solid var(--green);
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 20px rgba(166, 227, 161, 0.25);
+}
+
+.contact:hover {
+  background: #bef5b8;
+  border-color: #bef5b8;
+  box-shadow: 0 6px 28px rgba(166, 227, 161, 0.4);
+}
+
+.spinner {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+}

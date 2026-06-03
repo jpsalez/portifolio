@@ -1,0 +1,79 @@
+.section {
+  margin-bottom: 8px;
+}
+
+.neofetch {
+  display: flex;
+  gap: 44px;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.ascii {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--blue);
+  flex-shrink: 0;
+  text-shadow: 0 0 20px rgba(137, 180, 250, 0.45);
+  filter: drop-shadow(0 0 12px rgba(137, 180, 250, 0.3));
+}
+
+.asciiLine {
+  white-space: pre;
+}
+
+.info {
+  flex: 1;
+  min-width: 260px;
+}
+
+.infoRow {
+  font-size: 0.83rem;
+  line-height: 1.9;
+  display: flex;
+  align-items: baseline;
+}
+
+.infoLabel {
+  font-weight: 600;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.infoSep {
+  color: var(--overlay1);
+  margin-right: 4px;
+}
+
+.infoValue {
+  color: var(--subtext1);
+}
+
+.swatches {
+  display: flex;
+  gap: 4px;
+  margin-top: 7px;
+}
+
+.swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.scrollHint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: 0.72rem;
+  color: var(--overlay0);
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 640px) {
+  .neofetch { gap: 24px; }
+  .ascii    { font-size: 0.75rem; }
+}

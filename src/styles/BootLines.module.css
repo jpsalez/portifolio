@@ -1,0 +1,41 @@
+.boot {
+  margin-bottom: 8px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  line-height: 1.9;
+}
+
+.lineLabel {
+  color: var(--overlay0);
+  font-weight: 500;
+  white-space: pre;
+  min-width: 72px;
+}
+
+.lineSep {
+  color: var(--surface2);
+  flex-shrink: 0;
+}
+
+.lineValue {
+  flex: 1;
+}
+
+.ok {
+  color: var(--green);
+  font-weight: 600;
+  font-size: 0.72rem;
+  flex-shrink: 0;
+}
+
+.sep {
+  height: 1px;
+  margin: 14px 0 6px;
+  background: linear-gradient(90deg, var(--surface0) 0%, var(--mauve) 40%, transparent 100%);
+  opacity: 0.5;
+}

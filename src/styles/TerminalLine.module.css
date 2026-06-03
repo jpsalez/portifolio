@@ -1,0 +1,45 @@
+.promptLine {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 24px;
+  margin-bottom: 4px;
+}
+
+.user    { color: var(--green); font-weight: 600; }
+.at      { color: var(--overlay1); }
+.host    { color: var(--blue); font-weight: 600; }
+.colon   { color: var(--overlay1); }
+.dir     { color: var(--mauve); }
+.symbol  { color: var(--overlay1); white-space: pre; }
+.command { color: var(--text); }
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background: var(--blue);
+  margin-left: 1px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.outputLine {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  padding-left: 0;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, var(--surface0), transparent 80%);
+  margin: 32px 0;
+  opacity: 0.6;
+}

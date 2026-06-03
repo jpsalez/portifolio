@@ -1,0 +1,63 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.card {
+  background: rgba(24, 24, 37, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 18px 18px 18px 22px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.card:hover {
+  background: rgba(30, 30, 46, 0.85);
+  border-color: rgba(255, 255, 255, 0.11);
+}
+
+.cardAccent {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 3px;
+  border-radius: 0 2px 2px 0;
+  opacity: 0.7;
+}
+
+.cardHeader {
+  margin-bottom: 14px;
+}
+
+.catName {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 0.72rem;
+  padding: 3px 9px;
+  border: 1px solid var(--border, rgba(255,255,255,0.1));
+  border-radius: 4px;
+  color: var(--subtext0);
+  cursor: default;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s, transform 0.15s;
+}
+
+.tag:hover {
+  border-color: var(--hover-border, rgba(255,255,255,0.3));
+  color: var(--text);
+}

@@ -1,0 +1,226 @@
+.featured {
+  margin-top: 16px;
+  background: linear-gradient(135deg, var(--accent-bg, rgba(203,166,247,0.08)), rgba(24,24,37,0.5));
+  border: 1px solid var(--accent-border, rgba(203,166,247,0.25));
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 20px 22px;
+  position: relative;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.featured:hover {
+  border-color: rgba(203, 166, 247, 0.5);
+  box-shadow: 0 0 40px rgba(203, 166, 247, 0.08);
+}
+
+/* Top stripe glow */
+.featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(203,166,247,0.8), transparent);
+}
+
+/* ── Header ── */
+.featHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.featMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--yellow);
+  background: rgba(249, 226, 175, 0.1);
+  border: 1px solid rgba(249, 226, 175, 0.25);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.perm {
+  font-size: 0.68rem;
+  color: var(--overlay0);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  flex-wrap: wrap;
+}
+
+.featName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--lavender);
+  letter-spacing: -0.01em;
+}
+
+.lang {
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.expandBtn {
+  font-size: 0.72rem;
+  font-family: inherit;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(203,166,247,0.25);
+  color: var(--lavender);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.shortDesc {
+  font-size: 0.83rem;
+  color: var(--subtext0);
+  line-height: 1.6;
+}
+
+/* ── Expanded Body ── */
+.body {
+  overflow: hidden;
+}
+
+.bodyInner {
+  padding-top: 18px;
+}
+
+/* Screenshot */
+.previewWrap {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+.preview {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 340px;
+  transition: filter 0.3s;
+}
+
+.previewWrap:hover .preview {
+  filter: brightness(0.45);
+}
+
+.previewOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.previewWrap:hover .previewOverlay {
+  opacity: 1;
+}
+
+.previewBtn {
+  background: var(--mauve);
+  color: var(--crust);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+/* Highlights */
+.highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.highlights li {
+  font-size: 0.8rem;
+  color: var(--subtext1);
+  line-height: 1.5;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.tag {
+  font-size: 0.71rem;
+  padding: 3px 10px;
+  background: rgba(203, 166, 247, 0.08);
+  border: 1px solid rgba(203, 166, 247, 0.22);
+  border-radius: 4px;
+  color: var(--mauve);
+}
+
+/* Links */
+.links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+  color: var(--subtext0);
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.link:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.linkLive {
+  color: var(--green);
+  border-color: rgba(166, 227, 161, 0.25);
+}
+
+.linkLive:hover {
+  border-color: var(--green);
+  background: rgba(166, 227, 161, 0.06);
+}

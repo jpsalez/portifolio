@@ -1,0 +1,168 @@
+/* ── Backdrop (also the centering container) ── */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ── Modal window ── */
+.modal {
+  position: relative;
+  width: min(600px, 92vw);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(14, 14, 22, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 40px 100px rgba(0, 0, 0, 0.8),
+    0 0 60px rgba(180, 190, 254, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+/* ── Title bar ── */
+.titleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 42px;
+  padding: 0 14px;
+  background: rgba(24, 24, 37, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.dots {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  display: block;
+  transition: filter 0.15s;
+  flex-shrink: 0;
+  cursor: default;
+  padding: 0;
+}
+.dot:first-child { cursor: pointer; }
+.dot:hover { filter: brightness(1.15); }
+.red    { background: #ff5f57; }
+.yellow { background: #ffbd2e; }
+.green  { background: #28c840; }
+
+.tabTitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--subtext0);
+  letter-spacing: 0.02em;
+}
+
+/* ── Body ── */
+.body {
+  padding: 20px 24px 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* ── Prompt ── */
+.promptLine {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+}
+
+.pUser  { color: var(--green);   font-weight: 600; }
+.pAt    { color: var(--overlay1); }
+.pHost  { color: var(--blue);    font-weight: 600; }
+.pColon { color: var(--overlay1); }
+.pDir   { color: var(--mauve);   }
+.pSym   { color: var(--overlay1); white-space: pre; }
+
+.typedCmd { color: var(--text); }
+
+.cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  background: var(--blue);
+  vertical-align: middle;
+  margin-left: 1px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Output lines ── */
+.line {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── CTA ── */
+.cta {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.ctaBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(180, 190, 254, 0.1);
+  border: 1px solid rgba(180, 190, 254, 0.35);
+  border-radius: 8px;
+  color: var(--lavender);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 11px 20px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.ctaBtn:hover {
+  background: rgba(180, 190, 254, 0.18);
+  border-color: rgba(180, 190, 254, 0.6);
+}
+
+.ctaKey {
+  background: rgba(180, 190, 254, 0.2);
+  border: 1px solid rgba(180, 190, 254, 0.4);
+  border-radius: 4px;
+  padding: 1px 7px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+.ctaHint {
+  font-size: 0.68rem;
+  color: var(--overlay0);
+  letter-spacing: 0.04em;
+  padding-left: 2px;
+}

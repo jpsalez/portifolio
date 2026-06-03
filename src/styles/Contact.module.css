@@ -1,0 +1,113 @@
+.box {
+  margin-top: 16px;
+  background: rgba(17, 17, 27, 0.6);
+  border: 1px solid rgba(148, 226, 213, 0.15);
+  border-radius: 14px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(148,226,213,0.7), transparent);
+}
+
+.cvRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.cvHint {
+  font-size: 0.72rem;
+  color: var(--overlay0);
+  line-height: 1.5;
+  flex: 1;
+  min-width: 180px;
+}
+
+.quote {
+  font-size: 0.88rem;
+  color: var(--subtext0);
+  line-height: 1.7;
+  border-left: 3px solid rgba(148, 226, 213, 0.4);
+  padding-left: 16px;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  text-decoration: none;
+  background: rgba(30, 30, 46, 0.4);
+  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+
+.link:hover { background: rgba(30, 30, 46, 0.7); }
+
+.linkIcon { font-size: 1.2rem; flex-shrink: 0; }
+
+.linkText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.linkLabel { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.02em; }
+.linkValue { font-size: 0.74rem; color: var(--overlay1); }
+
+.linkDesc {
+  font-size: 0.72rem;
+  color: var(--overlay0);
+  flex-shrink: 0;
+}
+
+.linkArrow {
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.link:hover .linkArrow { transform: translate(2px, -2px); }
+
+/* Final idle prompt */
+.finalPrompt {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-top: 32px;
+}
+
+.pUser  { color: var(--green);   font-weight: 600; }
+.pAt    { color: var(--overlay1); }
+.pHost  { color: var(--blue);    font-weight: 600; }
+.pColon { color: var(--overlay1); }
+.pDir   { color: var(--mauve);   }
+.pSym   { color: var(--overlay1); white-space: pre; }
+
+.idleCursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background: var(--blue);
+  vertical-align: middle;
+}

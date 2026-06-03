@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Background from './components/Background';
+import WelcomeModal from './components/WelcomeModal';
+import MacWindow from './components/MacWindow';
+import FloatingNav from './components/FloatingNav';
+import Neofetch from './components/sections/Neofetch';
+import About from './components/sections/About';
+import Skills from './components/sections/Skills';
+import Projects from './components/sections/Projects';
+import Contact from './components/sections/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Background />
+      <WelcomeModal />
+      <div className="App">
+        <MacWindow>
+          <Neofetch />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </MacWindow>
+        <FloatingNav />
+      </div>
+    </>
   );
 }
 

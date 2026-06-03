@@ -1,0 +1,114 @@
+.nav {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(17, 17, 27, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 14px 16px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255,255,255,0.03);
+  min-width: 140px;
+}
+
+.label {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--overlay0);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  padding-left: 2px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 7px 8px;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: background 0.2s;
+  position: relative;
+  text-align: left;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.activeItem {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.itemLabel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.activeTag {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  border-radius: 0 2px 2px 0;
+  opacity: 0.8;
+}
+
+.footer {
+  font-size: 0.58rem;
+  color: var(--surface2);
+  letter-spacing: 0.06em;
+  margin-top: 8px;
+  padding-left: 2px;
+  text-align: center;
+}
+
+/* Mobile — bottom strip */
+@media (max-width: 900px) {
+  .nav {
+    right: 50%;
+    top: auto;
+    bottom: 16px;
+    transform: translateX(50%);
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 4px;
+    min-width: auto;
+    border-radius: 100px;
+  }
+  .label, .footer { display: none; }
+  .items { flex-direction: row; gap: 2px; }
+  .item { padding: 6px 10px; }
+  .itemLabel { display: none; }
+  .activeTag { display: none; }
+  .dot { width: 8px; height: 8px; }
+}
