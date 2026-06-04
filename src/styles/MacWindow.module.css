@@ -142,6 +142,15 @@
   z-index: 1;
 }
 
+@media (min-width: 1440px) {
+  .body { padding: 36px 44px; }
+  .titleBar { height: 50px; }
+}
+
+@media (min-width: 1920px) {
+  .body { padding: 44px 56px; }
+}
+
 @media (max-width: 640px) {
   .body { padding: 20px 16px 80px; }
 }

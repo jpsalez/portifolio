@@ -37,6 +37,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Escala todos os rem proporcionalmente em telas grandes */
+  font-size: clamp(16px, 1.1vw, 20px);
 }
 
 body {

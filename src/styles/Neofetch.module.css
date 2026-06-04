@@ -137,6 +137,16 @@
   border-color: rgba(137, 180, 250, 0.5);
 }
 
+@media (min-width: 1440px) {
+  .photo { width: 230px; height: 230px; }
+  .neofetch { gap: 52px; }
+}
+
+@media (min-width: 1920px) {
+  .photo { width: 270px; height: 270px; }
+  .neofetch { gap: 64px; }
+}
+
 @media (max-width: 640px) {
   .neofetch { gap: 20px; }
   .photo    { width: 120px; height: 120px; }
