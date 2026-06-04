@@ -4,16 +4,6 @@ import { Prompt } from '../TerminalLine';
 import BootLines from '../BootLines';
 import styles from '../../styles/Neofetch.module.css';
 
-const asciiLogo = [
-  '  ╭──────────╮',
-  '  │  ● ● ●   │',
-  '  ├──────────┤',
-  '  │  > jp_   │',
-  '  │          │',
-  '  │  ██████  │',
-  '  │  ██████  │',
-  '  ╰──────────╯',
-];
 
 const infoLines = [
   { label: 'joao@macbook',  value: '',                              color: 'var(--green)',   bold: true },
@@ -65,14 +55,10 @@ export default function Neofetch() {
           initial="hidden"
           animate="visible"
         >
-          {/* ASCII terminal icon */}
-          <div className={styles.ascii} aria-hidden="true">
-            {asciiLogo.map((line, i) => (
-              <motion.div key={i} variants={rowVariants} className={styles.asciiLine}>
-                {line}
-              </motion.div>
-            ))}
-          </div>
+          {/* Profile photo */}
+          <motion.div className={styles.photoWrap} variants={rowVariants}>
+            <img src="/avatar.jpeg" alt="João Pedro Sales" className={styles.photo} />
+          </motion.div>
 
           {/* System info */}
           <div className={styles.info}>
