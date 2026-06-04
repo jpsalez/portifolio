@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ScrollProgress from './ScrollProgress';
 import DownloadCV from './DownloadCV';
+import SectionDots from './SectionDots';
 import styles from '../styles/MacWindow.module.css';
 
 export default function MacWindow({ children }) {
@@ -60,6 +61,7 @@ export default function MacWindow({ children }) {
       <div className={styles.body}>
         <div className={styles.scanlines} aria-hidden="true" />
         {children}
+        <SectionDots />
       </div>
     </motion.div>
   );

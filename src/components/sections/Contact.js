@@ -31,7 +31,7 @@ export default function Contact() {
       >
         <p className={styles.quote}>
           "Sempre aberto para conversas sobre código, projetos<br />
-          ou oportunidades de trabalho. Pode me chamar! 🤝"
+          ou oportunidades de trabalho. Pode chamar! 🤝"
         </p>
 
         <motion.div

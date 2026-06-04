@@ -1,12 +1,17 @@
 .section {
-  margin-bottom: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding-bottom: 48px;
 }
 
 .neofetch {
   display: flex;
-  gap: 44px;
+  gap: 40px;
   align-items: flex-start;
-  margin-top: 20px;
+  margin-top: 14px;
   flex-wrap: wrap;
 }
 
@@ -24,8 +29,8 @@
 
 .photo {
   display: block;
-  width: 148px;
-  height: 148px;
+  width: 190px;
+  height: 190px;
   object-fit: cover;
   object-position: center top;
   filter: brightness(0.92) contrast(1.05) saturate(0.88);
@@ -37,15 +42,15 @@
 }
 
 .infoRow {
-  font-size: 0.83rem;
-  line-height: 1.9;
+  font-size: 0.88rem;
+  line-height: 1.75;
   display: flex;
   align-items: baseline;
 }
 
 .infoLabel {
   font-weight: 600;
-  min-width: 100px;
+  min-width: 105px;
   flex-shrink: 0;
 }
 
@@ -58,30 +63,83 @@
   color: var(--subtext1);
 }
 
+.infoLink {
+  color: var(--blue);
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.infoLink:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .swatches {
   display: flex;
   gap: 4px;
-  margin-top: 7px;
+  margin-top: 5px;
 }
 
 .swatch {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 3px;
   flex-shrink: 0;
 }
 
-.scrollHint {
+/* ── Navigation hint ── */
+.navHint {
+  margin-top: 12px;
+  padding: 7px 12px;
+  background: rgba(137, 180, 250, 0.06);
+  border: 1px solid rgba(137, 180, 250, 0.22);
+  border-radius: 7px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 18px;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.hintKey {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+  padding: 1px 7px;
   font-size: 0.72rem;
-  color: var(--overlay0);
-  letter-spacing: 0.06em;
+  color: var(--subtext0);
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+.hintLabel {
+  font-size: 0.75rem;
+  color: var(--overlay1);
+  flex: 1;
+}
+
+.nextBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(137, 180, 250, 0.12);
+  border: 1px solid rgba(137, 180, 250, 0.3);
+  border-radius: 5px;
+  padding: 4px 12px;
+  cursor: pointer;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s;
+}
+.nextBtn:hover {
+  background: rgba(137, 180, 250, 0.2);
+  border-color: rgba(137, 180, 250, 0.5);
 }
 
 @media (max-width: 640px) {
-  .neofetch   { gap: 24px; }
-  .photo      { width: 110px; height: 110px; }
+  .neofetch { gap: 20px; }
+  .photo    { width: 120px; height: 120px; }
+  .infoRow  { font-size: 0.8rem; }
+  .hintLabel { display: none; }
 }

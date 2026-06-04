@@ -1,35 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+import { useNav } from '../context/NavContext';
 import styles from '../styles/FloatingNav.module.css';
 
-const sections = [
-  { id: 'inicio',   label: 'Início',      color: 'var(--green)'   },
-  { id: 'sobre',    label: 'Sobre mim',   color: 'var(--blue)'    },
-  { id: 'skills',   label: 'Habilidades', color: 'var(--mauve)'   },
-  { id: 'projetos', label: 'Projetos',    color: 'var(--peach)'   },
-  { id: 'contato',  label: 'Contato',     color: 'var(--teal)'    },
-];
-
 export default function FloatingNav() {
-  const [active, setActive] = useState('inicio');
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => { if (e.isIntersecting) setActive(e.target.id); });
-      },
-      { threshold: 0.35, rootMargin: '-5% 0px -45% 0px' }
-    );
-    sections.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
-  }, []);
-
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const { currentIdx, goTo, sections } = useNav();
 
   return (
     <motion.nav
@@ -42,13 +17,13 @@ export default function FloatingNav() {
       <div className={styles.label}>Navegação</div>
 
       <div className={styles.items}>
-        {sections.map((s) => {
-          const isActive = active === s.id;
+        {sections.map((s, i) => {
+          const isActive = currentIdx === i;
           return (
             <motion.button
               key={s.id}
               className={`${styles.item} ${isActive ? styles.activeItem : ''}`}
-              onClick={() => scrollTo(s.id)}
+              onClick={() => goTo(i)}
               whileHover={{ x: -4 }}
               whileTap={{ scale: 0.96 }}
               transition={{ duration: 0.15 }}
@@ -82,7 +57,7 @@ export default function FloatingNav() {
         })}
       </div>
 
-      <div className={styles.footer}>↓ role para explorar</div>
+      <div className={styles.footer}>↕ role para explorar</div>
     </motion.nav>
   );
 }

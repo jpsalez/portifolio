@@ -3,25 +3,25 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles/WelcomeModal.module.css';
 
 const outputLines = [
-  { text: 'Inicializando portfólio...',                             color: 'var(--overlay1)', delay: 0.6  },
-  { text: '',                                                       color: '',                delay: 0.85 },
-  { text: 'Bem-vindo! Este site é o portfólio de',                 color: 'var(--text)',     delay: 1.0  },
-  { text: 'João Pedro Sales — Desenvolvedor Full-Stack',           color: 'var(--lavender)', delay: 1.2, bold: true },
-  { text: 'de Salvador, Bahia, Brasil. 🇧🇷',                        color: 'var(--subtext0)', delay: 1.4  },
-  { text: '',                                                       color: '',                delay: 1.55 },
-  { text: 'O site usa a estética de um terminal de',               color: 'var(--subtext0)', delay: 1.65 },
-  { text: 'computador — como os que devs usam no dia a dia.',      color: 'var(--subtext0)', delay: 1.82 },
-  { text: '',                                                       color: '',                delay: 1.98 },
-  { text: 'Aqui você vai encontrar:',                              color: 'var(--text)',     delay: 2.1  },
-  { text: '  →  Sobre mim e minha formação',                       color: 'var(--blue)',     delay: 2.25 },
-  { text: '  →  Minhas habilidades técnicas',                      color: 'var(--mauve)',    delay: 2.38 },
-  { text: '  →  Projeto FatFood (app de delivery)',                color: 'var(--peach)',    delay: 2.51 },
-  { text: '  →  Como me contatar',                                 color: 'var(--teal)',     delay: 2.64 },
-  { text: '',                                                       color: '',                delay: 2.78 },
-  { text: 'Use a navegação à direita ou role a página.',           color: 'var(--overlay1)', delay: 2.88 },
+  { text: 'Inicializando portfólio...',                                    color: 'var(--overlay1)', delay: 0.6  },
+  { text: '',                                                              color: '',                delay: 0.85 },
+  { text: 'Olá! Este é o meu portfólio pessoal.',                         color: 'var(--text)',     delay: 1.0  },
+  { text: 'Me chamo João Pedro Sales, tenho 21 anos',                     color: 'var(--lavender)', delay: 1.18, bold: true },
+  { text: 'e sou Desenvolvedor Full-Stack de Salvador, Bahia, Brasil. 🇧🇷', color: 'var(--lavender)', delay: 1.36, bold: true },
+  { text: '',                                                              color: '',                delay: 1.5  },
+  { text: 'Trabalho com C# / .NET no back-end',                           color: 'var(--subtext0)', delay: 1.6  },
+  { text: 'e Angular / React no front-end.',                              color: 'var(--subtext0)', delay: 1.76 },
+  { text: '',                                                              color: '',                delay: 1.9  },
+  { text: 'Aqui você vai encontrar:',                                      color: 'var(--text)',     delay: 2.0  },
+  { text: '  →  Sobre mim e minha formação',                              color: 'var(--blue)',     delay: 2.14 },
+  { text: '  →  Minhas habilidades técnicas',                             color: 'var(--mauve)',    delay: 2.27 },
+  { text: '  →  Projeto FatFood (app de delivery)',                       color: 'var(--peach)',    delay: 2.4  },
+  { text: '  →  Como me contatar',                                        color: 'var(--teal)',     delay: 2.53 },
+  { text: '',                                                              color: '',                delay: 2.65 },
+  { text: 'Use a navegação à direita ou ↑↓ para explorar.',               color: 'var(--overlay1)', delay: 2.75 },
 ];
 
-const CTA_DELAY = 3.3;
+const CTA_DELAY = 3.2;
 
 export default function WelcomeModal() {
   const [visible, setVisible] = useState(true);

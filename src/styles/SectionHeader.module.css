@@ -1,6 +1,6 @@
 .wrapper {
   margin-bottom: 4px;
-  padding-top: 40px;
+  padding-top: 16px;
 }
 
 .inner {
@@ -36,8 +36,8 @@
 }
 
 .subtitle {
-  font-size: 0.75rem;
-  color: var(--overlay1);
+  font-size: 0.78rem;
+  color: var(--subtext0);
   margin-top: 4px;
   letter-spacing: 0.02em;
 }

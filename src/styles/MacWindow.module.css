@@ -1,6 +1,6 @@
 .window {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background: rgba(17, 17, 27, 0.82);
@@ -13,8 +13,8 @@
 
 @media (min-width: 1100px) {
   .window {
+    height: calc(100vh - 80px);
     border-radius: 14px;
-    min-height: auto;
     box-shadow:
       0 0 0 1px rgba(255, 255, 255, 0.04),
       0 40px 100px rgba(0, 0, 0, 0.75),
@@ -117,7 +117,8 @@
 /* ── Body ── */
 .body {
   flex: 1;
-  padding: 28px 32px 100px;
+  min-height: 0;
+  padding: 28px 32px;
   position: relative;
   overflow: hidden;
 }
